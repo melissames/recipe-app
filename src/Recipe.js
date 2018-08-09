@@ -1,11 +1,9 @@
 import React from 'react';
-import Ingredient from './Ingredient';
-
 
 const Recipe = props => {
 
   const mapIngredients = () => {
-    return props.recipe.ingredients.split(',').map((ingredient, index) => <li><Ingredient key={index} ingredient={ingredient}/></li>)
+    return props.recipe.ingredients.split(',').map((ingredient, index) => <li key={index}>{ingredient}</li>)
   }
 
   return (
