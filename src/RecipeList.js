@@ -1,21 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Recipe from './Recipe.js'
 
-class RecipeList extends Component {
+const RecipeList = props => {
 
-  showRecipes = () => {
-    return this.props.recipes.map((recipe, index) => <Recipe key={index} recipe={recipe}/>)
+  const showRecipes = () => {
+    return props.recipes.map((recipe, index) => <Recipe key={index} recipe={recipe}/>)
   }
 
-  render() {
-    return (
-      <div>
-        {this.showRecipes()}
-        <button onClick={this.props.moreButton}>Show Me More! I'm Still Hungry</button>
-        <br></br><br></br>
-      </div>
-    )
-  }
+  return (
+    <div>
+      {showRecipes()}
+      <button onClick={props.moreButton}>Show Me More! I'm Still Hungry</button>
+      <br></br><br></br>
+    </div>
+  )
 }
 
 export default RecipeList;

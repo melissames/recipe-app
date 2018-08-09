@@ -63,7 +63,12 @@ class RecipeContainer extends Component {
           />
         </form>
         <br></br><br></br>
-        {this.state.recipeData ? <RecipeList recipes={this.state.recipeData} moreButton={this.showNextPageOfRecipes}/> : null}
+        {this.state.recipeData ?
+          <RecipeList
+          recipes={this.state.recipeData}
+          moreButton={this.showNextPageOfRecipes}
+          />
+          : null}
       </div>
     )
   }
